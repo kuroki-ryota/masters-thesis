@@ -28,8 +28,11 @@
 \newcommand\N{\mathbb{N}}
 \newcommand\Z{\mathbb{Z}}
 \newcommand\Q{\mathbb{Q}}
+\newcommand\p{\mathfrak{p}}
+\newcommand\m{\mathfrak{m}}
 \DeclareMathOperator{\Nil}{Nil}
 \DeclareMathOperator{\Jac}{Jac}
+\DeclareMathOperator{\Spec}{Spec}
 \DeclareMathOperator{\Kdim}{\mathsf{Kdim}}
 \title{Constructive theory of Jacobson rings}
 \author{Ryota Kuroki}
@@ -312,7 +315,29 @@ Generalizing Emerton's key lemma is the most crucial process in the proof of our
     \end{enumerate}
     Thus, $af\in\Nil_{B_n}0=\Nil_{B'}0$, and hence $af\in\Nil_BJ$.
 \end{proof}
-The above key lemma implies the following two corollaries, which are useful for constructing examples of Jacobson rings.
+\begin{remark}
+    The statement of Emerton's lemma \cite[Lemma 6]{Eme} is as follows:
+    \begin{quote}
+        \textit{If $A\to B$ is an injection of domains such that $A$ is Jacobson, and for some $a\in A-\{0\}$, the induced morphism $A_a \to B_a$ is integral, then $\Jac_B0=0$.}
+    \end{quote}
+    In classical mathematics, we can use this lemma to prove \cref{Emerton} as follows:
+    \begin{quote}
+        Define $A'$ and $B'$ as in the proof of \cref{Emerton}.
+        \begin{itemize}
+            \item Let $\p$ be a prime ideal of $B'$.
+                  Let $B'':=B'/\p$ and $A'':=A'/(\p\cap A')$.
+                  \begin{itemize}
+                    \item If $a\in\p$, then $a\Jac_{B'}0\subseteq\p$.
+                    \item If $a\notin\p$, then $a\in A''-\{0\}$.
+                          Hence $\Jac_{B''}0=0$ by Emerton's lemma.
+                          Hence $a\Jac_{B'}0\subseteq\Jac_{B'}0\subseteq\p$.
+                  \end{itemize}
+        \end{itemize}
+        Hence $a\Jac_{B'}0\subseteq\bigcap_{\p\in\Spec B'}\p=\Nil_{B'}0$.
+        Thus $a\Jac_{B}J\subseteq\Nil_{B}J$.\qed
+    \end{quote}
+\end{remark}
+\cref{Emerton} implies the following two corollaries, which are useful for constructing examples of Jacobson rings.
 \begin{corollary}[pointed out by Quitté {\cite{Qui24}}]
     If $A$ is a Jacobson ring and $a\in A$, then $A_a$ is Jacobson.
 \end{corollary}
