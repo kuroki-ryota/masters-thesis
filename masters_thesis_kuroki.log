@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.30)  30 NOV 2025 13:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.30)  3 DEC 2025 10:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -342,11 +342,26 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 78.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [2] [3] [4] [5] [6]
+) [2] [3]
+Overfull \hbox (5.87563pt too wide) in paragraph at lines 186--187
+\OT1/cmr/bx/n/10.95 Proposition 2.2 \OT1/cmr/m/n/10.95 ([[], Propo-si-tion XI-II-3.1, Lemma IX-1.2])\OT1/cmr/bx/n/10.95 . \OT1/cmr/m/it/10.95 Let $\OML/cmm/m/it/10.95 A$ \OT1/cmr/m/it/10.95 be a ring with $[] \OML/cmm/m/it/10.95 A \OMS/cmsy/m/n/10.95 ^^T
+ []
+
+[4] [5] [6]
 LaTeX Font Info:    Trying to load font information for U+euf on input line 327.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [7] [8] [9] [10] (./masters_thesis_kuroki.aux)
+) [7] [8]
+Underfull \hbox (badness 1005) in paragraph at lines 402--404
+[]\OT1/cmr/m/n/10.95 Goldman, O. (1951). Hilbert rings and the Hilbert Null-stel-len-satz. \OT1/cmr/m/it/10.95 Math. Z.
+ []
+
+
+Underfull \hbox (badness 1867) in paragraph at lines 412--413
+[]\OT1/cmr/m/n/10.95 Lorenzen, P. (1951). Al-ge-brais-che und lo-gis-tis-che Un-ter-suchun-gen ^^?uber freie
+ []
+
+[9] [10] (./masters_thesis_kuroki.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -355,18 +370,18 @@ Package rerunfilecheck Info: File `masters_thesis_kuroki.out' has not changed.
 (rerunfilecheck)             Checksum: 12C387411CE7856353973194954A8430;403.
  ) 
 Here is how much of TeX's memory you used:
- 11327 strings out of 476171
- 184243 string characters out of 5795036
- 1942975 words of memory out of 5000000
- 33127 multiletter control sequences out of 15000+600000
+ 11334 strings out of 476171
+ 184300 string characters out of 5795036
+ 1944975 words of memory out of 5000000
+ 33131 multiletter control sequences out of 15000+600000
  566695 words of font info for 68 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  75i,8n,79p,640b,590s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </root/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on masters_thesis_kuroki.pdf (10 pages, 266693 bytes).
+Output written on masters_thesis_kuroki.pdf (10 pages, 269543 bytes).
 PDF statistics:
- 362 PDF objects out of 1000 (max. 8388607)
- 307 compressed objects within 4 object streams
- 98 named destinations out of 1000 (max. 500000)
+ 369 PDF objects out of 1000 (max. 8388607)
+ 314 compressed objects within 4 object streams
+ 101 named destinations out of 1000 (max. 500000)
  25 words of extra memory for PDF output out of 10000 (max. 10000000)
 

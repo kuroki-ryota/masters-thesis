@@ -34,7 +34,7 @@
 \DeclareMathOperator{\Jac}{Jac}
 \DeclareMathOperator{\Spec}{Spec}
 \DeclareMathOperator{\Kdim}{\mathsf{Kdim}}
-\title{Constructive theory of Jacobson rings}
+\title{A constructive proof of the general Nullstellensatz for Jacobson rings}
 \author{Ryota Kuroki}
 \affil{Graduate School of Mathematical Sciences, The University of Tokyo,\\3-8-1 Komaba, Meguro-ku, Tokyo, 153-8914, Japan}
 \date{}
@@ -170,8 +170,8 @@ We next prove a fundamental lemma that can be used to avoid the use of prime ide
     Then we have $1\in\gen{\Jac U,1-ab}\subseteq\Jac (U,1-ab)$ for every $b\in A$.
     Thus $a\in\Jac U$ by \cref{radical-properties}-(2) with $(A,U,x,y)=(A,U,1,a)$.
 \end{proof}
-Before we provide some examples of Jacobson rings, we review the basic constructive theory of Krull dimension.
-Lombardi \cite[Définition 5.1]{Lom02} has introduced the following constructively acceptable definition of Krull dimension.
+Before we provide some examples of Jacobson rings, we review the constructive theory of Krull dimension developed by Joyal, Español, Lombardi, and Coquand \cite{Joy75,Esp78,Lom02,CL03}.
+The following constructive and elementary definition of Krull dimension has been introduced by Lombardi \cite[Définition 5.1]{Lom02}.
 \begin{definition}
     Let $n\ge-1$. A ring $A$ is of \emph{Krull dimension at most $n$} if for every $x_0,\ldots,x_n\in A$, there exists $e_0,\ldots,e_n\ge0$ such that
     \[x_0^{e_0}\cdots x_n^{e_n}\in\gen{x_0^{e_0+1},x_0^{e_0}x_1^{e_1+1},\ldots,x_0^{e_0}\cdots x_{n-1}^{e_{n-1}}x_n^{e_n+1}}.\]
@@ -388,43 +388,46 @@ We note that Wiesnet \cite[Theorem 1]{Wie21}, \cite[Theorem 2]{Wie25} has obtain
 
 \begin{thebibliography}{99}
 % delete irrelevant references
-\bibitem{Arr21} Arrow (https://mathoverflow.net/users/69037/arrow) (2021). \emph{Can you constructively prove a univariate polynomial algebra over a Jacobson ring is itself Jacobson?}. MathOverflow. (version: 2021-11-06). Available at: \url{https://mathoverflow.net/q/405685}.
-\bibitem{CC00} Cederquist, J., Coquand, T. (2000). Entailment relations and distributive lattices. In: Buss, S.~R., Hájek, P., Pudlák, P., eds. \emph{Logic Colloquium ’98. Proceedings of the Annual European Summer Meeting of the Association for Symbolic Logic, Prague, Czech Republic, August 9–15, 1998}. Lecture Notes in Logic, 13. Natick, MA: A K Peters, pp.~127--139.
-\bibitem{CL24} Coquand, T., Lombardi, H. (2024). \emph{Résolutions libres finies. Méthodes constructives}. Paris, France: Calvage et Mounet.
-\bibitem{CLQ06} Coquand T., Lombardi H., Quitte C. (2006). Dimension de Heitmann des treillis distributifs et des anneaux commutatifs. \emph{Publications mathématiques de Besançon. Algèbre et Théorie des Nombres}, pp. 57--100.
-\bibitem{CP01} Coquand, T., Persson, H. (2001). Valuations and Dedekind’s Prague theorem. \emph{J. Pure Appl. Algebra} 155(2--3):121--129. 
-\bibitem{CLR01} Coste, M., Lombardi, H., Roy, M.~F. (2001). Dynamical method in algebra: effective Nullstellens\"atze. \emph{Ann. Pure Appl. Logic}, 111(3):203--256.
-% \bibitem{DIM21} Delzell, C.~N., Ighedo, O., Madden, J.~J. (2021). Conjunctive join-semilattices. \emph{Algebra Univers.} 82, 51.
-\bibitem{Eis95} Eisenbud, D. (1995). \emph{Commutative Algebra: with a View Toward Algebraic Geometry}. Graduate Texts in Mathematics. Vol.~150. New York, NY: Springer.
-\bibitem{Eme} Emerton, M. \emph{Jacobson rings}. Available at: \url{https://www.math.uchicago.edu/~emerton/pdffiles/jacobson.pdf}.
-\bibitem{Gol51} Goldman, O. (1951). Hilbert rings and the Hilbert Nullstellensatz. \emph{Math. Z.} 54(2):136--140.
-% \bibitem{HP89} Heinzer, W.~J., Papick, I.~J. (1989). Remarks on a remark of Kaplansky. \emph{Proc. Amer. Math. Soc.} 105:1--9.
-% \bibitem{KY10} Kacem, A.~H., Yengui, I. (2010). Dynamical Gröbner bases over Dedekind rings. \emph{J. Algebra}. 324(1):12--24.
-\bibitem{Kru51} Krull, W. (1951). Jacobsonsche Ringe, Hilbertscher Nullstellensatz, Dimensionstheorie. \emph{Math. Z.} 54(4):354--387.
-\bibitem{Lom02} Lombardi, H. (2002). Dimension de Krull, Nullstellens\"atze et évaluation dynamique. \emph{Math. Z.} 242(1):23--46.
-\bibitem{Lom23} Lombardi, H. (2023). \emph{Some classical results in Algebra needing one or several constructive versions}. Available at: \url{https://groups.google.com/g/constructivenews/c/Z6ZEmRdep8o/m/TNVpuihzAAAJ}.
-\bibitem{Lom24} Lombardi, H. Personal communication, 2024.
-\bibitem{LQ15} Lombardi, H., Quitté, C. (2015). \emph{Commutative algebra: constructive methods}. (Roblot, T.~K., trans.) Algebra and Applications, Vol. 20. Dordrecht, The Netherlands: Springer.
-% \bibitem{LSY12} Lombardi, H., Schuster, P., Yengui, I. (2012). The Gröbner ring conjecture in one variable, \emph{Math. Z.} 270(3--4):1181--1185.
-\bibitem{Lor51} Lorenzen, P. (1951). Algebraische und logistische Untersuchungen über freie Verbände. \emph{Journal of Symbolic Logic}. 16(2):81--106.
-\bibitem{Lor25} Lorenzen, P. (2025). Algebraic and logistic investigations on free lattices. (Neuwirth, S., trans.) \emph{History and Philosophy of Logic}. 1--25. DOI: \href{https://doi.org/10.1080/01445340.2024.2444825}{10.1080/01445340.2024.2444825}.
-% \bibitem{MDI22} Madden, J.~J., Delzell, C.~N., Ighedo, O. (2022). Recent Work on Conjunctive Join-Semilattices. Presented at BLAST 2022, Orange, CA, August 9. Available at: \url{https://math.chapman.edu/blast2022/Tuesday/Madden-BLAST2022.pdf}
-\bibitem{MRR88} Mines, R., Richman, F., Ruitenburg, W. (1988). \emph{A course in constructive algebra}. Universitext. New York, NY: Springer.
-% \bibitem{PY14} Pola, E., Yengui, I. (2014). Gröbner rings. \emph{Acta Sci. Math.} 80(3--4):363--372.
-\bibitem{Qui24} Quitté, C. Personal communication, 2024
-\bibitem{Ric74} Richman, F. (1974). Constructive aspects of Noetherian rings. \emph{Proc. Amer. Mat. Soc.} 44(2):436--441.
-% \bibitem{Sim78} Simmons, H. (1978). The lattice theoretic part of topological separation properties. \emph{Proceedings of the Edinburgh Mathematical Society}. 21(1):41--48.
-\bibitem{SW21} Schuster, P., Wessel, D. (2021). Syntax for semantics: Krull's maximal ideal theorem. In: Heinzmann, G., Wolters, G., eds. \emph{Paul Lorenzen -- mathematician and logician}. Logic, Epistemology, and the Unity of Science. Vol.~51. Cham, Switzerland: Springer, pp.~77--102.
-\bibitem{Sco71} Scott, D. (1971). On engendering an illusion of understanding. \emph{Journal of Philosophy}. 68(21):787--807.
-\bibitem{Sco74} Scott, D. (1974). Completeness and axiomatizability in many-valued logic. In: Henkin, L., Addison, J., Chang, C.~C., Craig, W., Scott, D., Vaught, R., eds. \emph{Proceedings of the Tarski Symposium (Proc. Sympos. Pure Math., Vol. XXV, Univ. California, Berkeley, Calif., 1971)}, Providence, RI: American Mathematical Society, pp.~411--435.
-\bibitem{Sei74} Seidenberg, A. (1974). What is Noetherian? \emph{Rend. Sem. Mat. e Fis. Milano}. 44:55--61.
-\bibitem{Sna50} Snapper, E. (1950). Completely primary rings. I. \emph{Ann. of Math.} 52(3):666--693.
-\bibitem{Wer17} Werner, J. (https://mathoverflow.net/users/112369/jakob-werner) (2017). \emph{Constructive treatment of Jacobson rings}. MathOverflow. (version: 2017-07-18). Available at: \url{https://mathoverflow.net/q/275737}.
-\bibitem{Wes18} Wessel, D. (2018). \emph{Choice, extension, conservation. From transfinite to finite proof methods in abstract algebra}. PhD thesis. University of Trento, University of Verona.
-\bibitem{Wie21} Wiesnet, F. (2021). An Algorithmic Version of Zariski's Lemma. In: De Mol, L., Weiermann, A., Manea, F., Fernández-Duque, D., eds. \emph{Connecting with Computability. CiE 2021}. Lecture Notes in Computer Science, Vol. 12813. Cham, Switzerland: Springer, pp.~469--482.
-\bibitem{Wie25} Wiesnet, F. (2025). Constructive Analysis of Maximal Ideals in $\mathbb{Z}[X]$ by the Material Interpretation. In: Beckmann, A., Oitavem, I., Manea, F., eds. \emph{Crossroads of Computability and Logic: Insights, Inspirations, and Innovations. CiE 2025}. Lecture Notes in Computer Science. Vol.~15764. Cham, Switzerland: Springer, pp.~482--495.
-% \bibitem{Yen06} Yengui, I. (2006). Dynamical Gröbner bases. \emph{J. Algebra}. 301(2):447--458.
-% \bibitem{Yen14} Yengui, I. (2014). The Gröbner Ring Conjecture in the lexicographic order case. \emph{Math. Z.} 276(1--2):216--265.
-\bibitem{Yen15} Yengui, I. (2015). \emph{Constructive commutative algebra}. Lecture Notes in Mathematics. Vol.~2138. Cham, Switzerland: Springer.
+\bibitem[Arr21]{Arr21} Arrow (https://mathoverflow.net/users/69037/arrow) (2021). \emph{Can you constructively prove a univariate polynomial algebra over a Jacobson ring is itself Jacobson?}. MathOverflow. (version: 2021-11-06). Available at: \url{https://mathoverflow.net/q/405685}.
+\bibitem[CC00]{CC00} Cederquist, J., Coquand, T. (2000). Entailment relations and distributive lattices. In: Buss, S.~R., Hájek, P., Pudlák, P., eds. \emph{Logic Colloquium ’98. Proceedings of the Annual European Summer Meeting of the Association for Symbolic Logic, Prague, Czech Republic, August 9--15, 1998}. Lecture Notes in Logic, 13. Natick, MA: A K Peters, pp.~127--139.
+\bibitem[CL03]{CL03} Coquand, T., Lombardi, H.(2003). Hidden constructions in abstract algebra: Krull dimension of distributive lattices and commutative rings. In: Fontana, M., Kabbaj \mbox{S.-E.}, Wiegand, S. eds. \emph{Commutative ring theory and applications (Fez, 2001)}, Lect. Notes Pure Appl. Math., 231. New York, NY: Marcel Dekker. pp. 477--499.
+\bibitem[CL24]{CL24} Coquand, T., Lombardi, H. (2024). \emph{Résolutions libres finies. Méthodes constructives}. Paris, France: Calvage et Mounet.
+\bibitem[CLQ06]{CLQ06} Coquand T., Lombardi H., Quitte C. (2006). Dimension de Heitmann des treillis distributifs et des anneaux commutatifs. \emph{Publications mathématiques de Besançon. Algèbre et Théorie des Nombres}, pp. 57--100.
+\bibitem[CP01]{CP01} Coquand, T., Persson, H. (2001). Valuations and Dedekind’s Prague theorem. \emph{J. Pure Appl. Algebra} 155(2--3):121--129. 
+\bibitem[CLR01]{CLR01} Coste, M., Lombardi, H., Roy, M.~F. (2001). Dynamical method in algebra: effective Nullstellens\"atze. \emph{Ann. Pure Appl. Logic}, 111(3):203--256.
+% \bibitem[DIM21]{DIM21} Delzell, C.~N., Ighedo, O., Madden, J.~J. (2021). Conjunctive join-semilattices. \emph{Algebra Univers.} 82, 51.
+\bibitem[Eis95]{Eis95} Eisenbud, D. (1995). \emph{Commutative Algebra: with a View Toward Algebraic Geometry}. Graduate Texts in Mathematics. Vol.~150. New York, NY: Springer.
+\bibitem[Eme]{Eme} Emerton, M. \emph{Jacobson rings}. Available at: \url{https://www.math.uchicago.edu/~emerton/pdffiles/jacobson.pdf}.
+\bibitem[Esp78]{Esp78} Español, L. (1978). \emph{Dimensión en álgebra constructiva}. PhD thesis. University of Zaragoza. Available at: \url{https://dialnet.unirioja.es/servlet/tesis?codigo=1402}.
+\bibitem[Gol51]{Gol51} Goldman, O. (1951). Hilbert rings and the Hilbert Nullstellensatz. \emph{Math. Z.} 54(2):136--140.
+% \bibitem[HP89]{HP89} Heinzer, W.~J., Papick, I.~J. (1989). Remarks on a remark of Kaplansky. \emph{Proc. Amer. Math. Soc.} 105:1--9.
+\bibitem[Joy75]{Joy75} Joyal, A. (1975). Les Théorèmes de Chevalley-Tarski et Remarques sur l'Algèbre Constructive. \emph{Cah. Top. Géom. Diff. Cat. XVI}, 256--258.
+% \bibitem[KY10]{KY10} Kacem, A.~H., Yengui, I. (2010). Dynamical Gröbner bases over Dedekind rings. \emph{J. Algebra}. 324(1):12--24.
+\bibitem[Kru51]{Kru51} Krull, W. (1951). Jacobsonsche Ringe, Hilbertscher Nullstellensatz, Dimensionstheorie. \emph{Math. Z.} 54(4):354--387.
+\bibitem[Lom02]{Lom02} Lombardi, H. (2002). Dimension de Krull, Nullstellens\"atze et évaluation dynamique. \emph{Math. Z.} 242(1):23--46.
+\bibitem[Lom23]{Lom23} Lombardi, H. (2023). \emph{Some classical results in Algebra needing one or several constructive versions}. Available at: \url{https://groups.google.com/g/constructivenews/c/Z6ZEmRdep8o/m/TNVpuihzAAAJ}.
+\bibitem[Lom24]{Lom24} Lombardi, H. Personal communication, 2024.
+\bibitem[LQ15]{LQ15} Lombardi, H., Quitté, C. (2015). \emph{Commutative algebra: constructive methods}. (Roblot, T.~K., trans.) Algebra and Applications, Vol. 20. Dordrecht, The Netherlands: Springer.
+% \bibitem[LSY12]{LSY12} Lombardi, H., Schuster, P., Yengui, I. (2012). The Gröbner ring conjecture in one variable, \emph{Math. Z.} 270(3--4):1181--1185.
+\bibitem[Lor51]{Lor51} Lorenzen, P. (1951). Algebraische und logistische Untersuchungen über freie Verbände. \emph{Journal of Symbolic Logic}. 16(2):81--106.
+\bibitem[Lor25]{Lor25} Lorenzen, P. (2025). Algebraic and logistic investigations on free lattices. (Neuwirth, S., trans.) \emph{History and Philosophy of Logic}. 1--25. DOI: \href{https://doi.org/10.1080/01445340.2024.2444825}{10.1080/01445340.2024.2444825}.
+% \bibitem[MDI22]{MDI22} Madden, J.~J., Delzell, C.~N., Ighedo, O. (2022). Recent Work on Conjunctive Join-Semilattices. Presented at BLAST 2022, Orange, CA, August 9. Available at: \url{https://math.chapman.edu/blast2022/Tuesday/Madden-BLAST2022.pdf}
+\bibitem[MRR88]{MRR88} Mines, R., Richman, F., Ruitenburg, W. (1988). \emph{A course in constructive algebra}. Universitext. New York, NY: Springer.
+% \bibitem[PY14]{PY14} Pola, E., Yengui, I. (2014). Gröbner rings. \emph{Acta Sci. Math.} 80(3--4):363--372.
+\bibitem[Qui24]{Qui24} Quitté, C. Personal communication, 2024
+\bibitem[Ric74]{Ric74} Richman, F. (1974). Constructive aspects of Noetherian rings. \emph{Proc. Amer. Mat. Soc.} 44(2):436--441.
+% \bibitem[Sim78]{Sim78} Simmons, H. (1978). The lattice theoretic part of topological separation properties. \emph{Proceedings of the Edinburgh Mathematical Society}. 21(1):41--48.
+\bibitem[SW21]{SW21} Schuster, P., Wessel, D. (2021). Syntax for semantics: Krull's maximal ideal theorem. In: Heinzmann, G., Wolters, G., eds. \emph{Paul Lorenzen -- mathematician and logician}. Logic, Epistemology, and the Unity of Science. Vol.~51. Cham, Switzerland: Springer, pp.~77--102.
+\bibitem[Sco71]{Sco71} Scott, D. (1971). On engendering an illusion of understanding. \emph{Journal of Philosophy}. 68(21):787--807.
+\bibitem[Sco74]{Sco74} Scott, D. (1974). Completeness and axiomatizability in many-valued logic. In: Henkin, L., Addison, J., Chang, C.~C., Craig, W., Scott, D., Vaught, R., eds. \emph{Proceedings of the Tarski Symposium (Proc. Sympos. Pure Math., Vol. XXV, Univ. California, Berkeley, Calif., 1971)}, Providence, RI: American Mathematical Society, pp.~411--435.
+\bibitem[Sei74]{Sei74} Seidenberg, A. (1974). What is Noetherian? \emph{Rend. Sem. Mat. e Fis. Milano}. 44:55--61.
+\bibitem[Sna50]{Sna50} Snapper, E. (1950). Completely primary rings. I. \emph{Ann. of Math.} 52(3):666--693.
+\bibitem[Wer17]{Wer17} Werner, J. (https://mathoverflow.net/users/112369/jakob-werner) (2017). \emph{Constructive treatment of Jacobson rings}. MathOverflow. (version: 2017-07-18). Available at: \url{https://mathoverflow.net/q/275737}.
+\bibitem[Wes18]{Wes18} Wessel, D. (2018). \emph{Choice, extension, conservation. From transfinite to finite proof methods in abstract algebra}. PhD thesis. University of Trento, University of Verona.
+\bibitem[Wie21]{Wie21} Wiesnet, F. (2021). An Algorithmic Version of Zariski's Lemma. In: De Mol, L., Weiermann, A., Manea, F., Fernández-Duque, D., eds. \emph{Connecting with Computability. CiE 2021}. Lecture Notes in Computer Science, Vol. 12813. Cham, Switzerland: Springer, pp.~469--482.
+\bibitem[Wie25]{Wie25} Wiesnet, F. (2025). Constructive Analysis of Maximal Ideals in $\mathbb{Z}[X]$ by the Material Interpretation. In: Beckmann, A., Oitavem, I., Manea, F., eds. \emph{Crossroads of Computability and Logic: Insights, Inspirations, and Innovations. CiE 2025}. Lecture Notes in Computer Science. Vol.~15764. Cham, Switzerland: Springer, pp.~482--495.
+% \bibitem[Yen06]{Yen06} Yengui, I. (2006). Dynamical Gröbner bases. \emph{J. Algebra}. 301(2):447--458.
+% \bibitem[Yen14]{Yen14} Yengui, I. (2014). The Gröbner Ring Conjecture in the lexicographic order case. \emph{Math. Z.} 276(1--2):216--265.
+\bibitem[Yen15]{Yen15} Yengui, I. (2015). \emph{Constructive commutative algebra}. Lecture Notes in Mathematics. Vol.~2138. Cham, Switzerland: Springer.
 \end{thebibliography}
 \end{document}
