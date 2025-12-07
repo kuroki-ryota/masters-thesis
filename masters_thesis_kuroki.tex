@@ -62,9 +62,10 @@ Lastly, I would like to thank my parents for supporting my life and enabling me 
 \section*{Funding}
 This research was supported by Forefront Physics and Mathematics Program to Drive Transformation (FoPM), a World-leading Innovative Graduate Study (WINGS) Program, the University of Tokyo.
 \newpage
-This thesis contains the contents of the following paper, which has been accepted for publication:
+This thesis contains the contents of the following paper:
+% , which has been accepted for publication:
 \begin{itemize}
-    \item Kuroki, R. (2025). A constructive proof of the general Nullstellensatz for Jacobson rings. \emph{Comm. Algebra}. 1--11. DOI: \href{https://doi.org/10.1080/00927872.2025.2554952}{10.1080/00927872.2025.2554952}
+    \item Kuroki, R. (2025). A constructive proof of the general Nullstellensatz for Jacobson rings. \emph{Comm. Algebra}. Advance online publication. DOI: \href{https://doi.org/10.1080/00927872.2025.2554952}{10.1080/00927872.2025.2554952}
 \end{itemize}
 
 \section{Introduction}
@@ -293,7 +294,7 @@ The following lemma is a constructive counterpart of the key lemma given by Emer
 Emerton's lemma assumes that $A$ and $B$ are integral domains.
 As explained in \cref{dynamical}, we need to remove this assumption to eliminate the use of prime ideals and maximal ideals and to obtain a constructive proof of the general Nullstellensatz.
 Generalizing Emerton's key lemma is the most crucial process in the proof of our main theorem.
-\begin{lemma}\label{Emerton}
+\begin{lemma}[Constructive counterpart of Emerton's lemma]\label{Emerton}
     Let $A$ be a Jacobson ring, $a\in A$, and $B$ be an $A$-algebra such that $B_a$ is integral over $A_a$.
     Then $a\Jac_BJ\subseteq\Nil_BJ$ holds for all ideals $J$ of $B$.
 \end{lemma}
