@@ -2,10 +2,10 @@
 
 \usepackage[top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
 \usepackage{amsmath,amsthm,amssymb}
-\usepackage{authblk,xurl}
-\usepackage{hyperref}
+\usepackage{authblk,xurl,xcolor}
+\usepackage{hyperref,enumitem}
 \usepackage[capitalise]{cleveref}
-
+\setlist{itemsep=0pt}
 \let\OLDthebibliography\thebibliography
 \renewcommand\thebibliography[1]{
   \OLDthebibliography{#1}
@@ -15,14 +15,14 @@
 
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem*{classicaltheorem}{Classical Theorem}
-\newtheorem{lemma}{Lemma}[section]
-\newtheorem{corollary}{Corollary}[section]
-\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
 
 \theoremstyle{definition}
-\newtheorem{remark}{Remark}[section]
-\newtheorem{definition}{Definition}[section]
-\newtheorem{example}{Example}[section]
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
 
 \newcommand\gen[1]{\langle{#1}\rangle}
 \newcommand\N{\mathbb{N}}
@@ -57,7 +57,7 @@ I would like to thank Thierry Coquand and Ingo Blechschmidt for providing advice
 I would like to thank Hajime Ishihara and Takako Nemoto for providing advice on studying constructive mathematics and for introducing me to people working on constructive algebra.
 I would also like to thank Ralph Willox for his writing advice.
 
-Lastly, I would like to thank my parents for supporting my life and enabling me to focus on my research.
+Lastly, I would like to thank my family for supporting my life and enabling me to focus on my research.
 
 \section*{Funding}
 This research was supported by Forefront Physics and Mathematics Program to Drive Transformation (FoPM), a World-leading Innovative Graduate Study (WINGS) Program, the University of Tokyo.
@@ -381,11 +381,22 @@ We obtain a solution to two problems \cite[{}1.1, 1.2]{Lom23} in Lombardi's list
     Let $A$ be a zero-dimensional ring or the ring of integers $\Z$.
     Then every finitely generated algebra over $A$ is Jacobson.
 \end{corollary}
-Future research could use a similar method to provide a constructive version of the following Nullstellensatz \cite[{}1.4]{Lom23}:
+\section{Conclusions and future work}
+We have developed the basic constructive theory of Jacobson ring and obtained a constructive proof of the general Nullstellensatz.
+As a result, we proved the following theorems constructively:
+\begin{itemize}
+    \item The ring $\Z$ is Jacobson.
+    \item Every algebra that is integral over a Jacobson ring is Jacobson.
+    \item Every finitely generated algebra over a Jacobson ring is Jacobson.
+\end{itemize}
+
+As Lombardi \cite[{}1.4]{Lom23} has suggested, future studies could search for a constructive version of the following Nullstellensatz, which is also called Zariski's lemma for Jacobson rings:
 \begin{classicaltheorem}[{\cite[Theorem 5 and its corollary]{Gol51}, \cite[Satz 1]{Kru51}, \cite[Theorem 4.19]{Eis95}}]
     Let $A$ be a Jacobson ring, $B$ be a finitely generated $A$-algebra, and $\mathfrak{n}$ be a maximal ideal of $B$. Then $\mathfrak{m}:=\mathfrak{n}\cap A$ is a maximal ideal of $A$, and $B/\mathfrak{n}$ is a finite extension field of $A/\mathfrak{m}$.
 \end{classicaltheorem}
 We note that Wiesnet \cite[Theorem 1]{Wie21}, \cite[Theorem 2]{Wie25} has obtained partial results in this direction.
+
+\textcolor{blue}{finitely Jacobson rings...} 
 
 \begin{thebibliography}{99}
 % delete irrelevant references
@@ -393,7 +404,7 @@ We note that Wiesnet \cite[Theorem 1]{Wie21}, \cite[Theorem 2]{Wie25} has obtain
 \bibitem[CC00]{CC00} Cederquist, J., Coquand, T. (2000). Entailment relations and distributive lattices. In: Buss, S.~R., Hájek, P., Pudlák, P., eds. \emph{Logic Colloquium ’98. Proceedings of the Annual European Summer Meeting of the Association for Symbolic Logic, Prague, Czech Republic, August 9--15, 1998}. Lecture Notes in Logic, 13. Natick, MA: A K Peters, pp.~127--139.
 \bibitem[CL03]{CL03} Coquand, T., Lombardi, H.(2003). Hidden constructions in abstract algebra: Krull dimension of distributive lattices and commutative rings. In: Fontana, M., Kabbaj \mbox{S.-E.}, Wiegand, S. eds. \emph{Commutative ring theory and applications (Fez, 2001)}, Lect. Notes Pure Appl. Math., 231. New York, NY: Marcel Dekker. pp. 477--499.
 \bibitem[CL24]{CL24} Coquand, T., Lombardi, H. (2024). \emph{Résolutions libres finies. Méthodes constructives}. Paris, France: Calvage et Mounet.
-\bibitem[CLQ06]{CLQ06} Coquand T., Lombardi H., Quitte C. (2006). Dimension de Heitmann des treillis distributifs et des anneaux commutatifs. \emph{Publications mathématiques de Besançon. Algèbre et Théorie des Nombres}, pp. 57--100.
+% \bibitem[CLQ06]{CLQ06} Coquand, T., Lombardi, H., Quitte, C. (2006). Dimension de Heitmann des treillis distributifs et des anneaux commutatifs. \emph{Publications mathématiques de Besançon. Algèbre et Théorie des Nombres}, pp. 57--100.
 \bibitem[CP01]{CP01} Coquand, T., Persson, H. (2001). Valuations and Dedekind’s Prague theorem. \emph{J. Pure Appl. Algebra} 155(2--3):121--129. 
 \bibitem[CLR01]{CLR01} Coste, M., Lombardi, H., Roy, M.~F. (2001). Dynamical method in algebra: effective Nullstellens\"atze. \emph{Ann. Pure Appl. Logic}, 111(3):203--256.
 % \bibitem[DIM21]{DIM21} Delzell, C.~N., Ighedo, O., Madden, J.~J. (2021). Conjunctive join-semilattices. \emph{Algebra Univers.} 82, 51.
@@ -416,12 +427,12 @@ We note that Wiesnet \cite[Theorem 1]{Wie21}, \cite[Theorem 2]{Wie25} has obtain
 \bibitem[MRR88]{MRR88} Mines, R., Richman, F., Ruitenburg, W. (1988). \emph{A course in constructive algebra}. Universitext. New York, NY: Springer.
 % \bibitem[PY14]{PY14} Pola, E., Yengui, I. (2014). Gröbner rings. \emph{Acta Sci. Math.} 80(3--4):363--372.
 \bibitem[Qui24]{Qui24} Quitté, C. Personal communication, 2024
-\bibitem[Ric74]{Ric74} Richman, F. (1974). Constructive aspects of Noetherian rings. \emph{Proc. Amer. Mat. Soc.} 44(2):436--441.
+% \bibitem[Ric74]{Ric74} Richman, F. (1974). Constructive aspects of Noetherian rings. \emph{Proc. Amer. Mat. Soc.} 44(2):436--441.
 % \bibitem[Sim78]{Sim78} Simmons, H. (1978). The lattice theoretic part of topological separation properties. \emph{Proceedings of the Edinburgh Mathematical Society}. 21(1):41--48.
 \bibitem[SW21]{SW21} Schuster, P., Wessel, D. (2021). Syntax for semantics: Krull's maximal ideal theorem. In: Heinzmann, G., Wolters, G., eds. \emph{Paul Lorenzen -- mathematician and logician}. Logic, Epistemology, and the Unity of Science. Vol.~51. Cham, Switzerland: Springer, pp.~77--102.
 \bibitem[Sco71]{Sco71} Scott, D. (1971). On engendering an illusion of understanding. \emph{Journal of Philosophy}. 68(21):787--807.
 \bibitem[Sco74]{Sco74} Scott, D. (1974). Completeness and axiomatizability in many-valued logic. In: Henkin, L., Addison, J., Chang, C.~C., Craig, W., Scott, D., Vaught, R., eds. \emph{Proceedings of the Tarski Symposium (Proc. Sympos. Pure Math., Vol. XXV, Univ. California, Berkeley, Calif., 1971)}, Providence, RI: American Mathematical Society, pp.~411--435.
-\bibitem[Sei74]{Sei74} Seidenberg, A. (1974). What is Noetherian? \emph{Rend. Sem. Mat. e Fis. Milano}. 44:55--61.
+% \bibitem[Sei74]{Sei74} Seidenberg, A. (1974). What is Noetherian? \emph{Rend. Sem. Mat. e Fis. Milano}. 44:55--61.
 \bibitem[Sna50]{Sna50} Snapper, E. (1950). Completely primary rings. I. \emph{Ann. of Math.} 52(3):666--693.
 \bibitem[Wer17]{Wer17} Werner, J. (https://mathoverflow.net/users/112369/jakob-werner) (2017). \emph{Constructive treatment of Jacobson rings}. MathOverflow. (version: 2017-07-18). Available at: \url{https://mathoverflow.net/q/275737}.
 \bibitem[Wes18]{Wes18} Wessel, D. (2018). \emph{Choice, extension, conservation. From transfinite to finite proof methods in abstract algebra}. PhD thesis. University of Trento, University of Verona.
