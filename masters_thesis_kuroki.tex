@@ -394,17 +394,23 @@ As Lombardi \cite[{}1.4]{Lom23} has suggested, future studies could search for a
 \begin{classicaltheorem}[{\cite[Theorem 5 and its corollary]{Gol51}, \cite[Satz 1]{Kru51}, \cite[Theorem 4.19]{Eis95}}]
     Let $A$ be a Jacobson ring, $B$ be a finitely generated $A$-algebra, and $\mathfrak{n}$ be a maximal ideal of $B$. Then $\mathfrak{m}:=\mathfrak{n}\cap A$ is a maximal ideal of $A$, and $B/\mathfrak{n}$ is a finite extension field of $A/\mathfrak{m}$.
 \end{classicaltheorem}
+\noindent
 We note that Wiesnet \cite[Theorem 1]{Wie21}, \cite[Theorem 2]{Wie25} has obtained partial results in this direction.
 
-\textcolor{blue}{finitely Jacobson rings...} 
-
+As mentioned in the introduction, the constructive definition of Jacobson rings contains a quantification over all ideals of a ring, which is not accepted in some predicative foundations of mathematics.
+A more acceptable alternative is the notion of \emph{finitely Jacobson rings}, which is introduced in several studies \cite[Définitions 1.2]{CLQ06}, \cite[p.\ 9]{MDI22}.
+\begin{definition}
+    We call a ring $A$ \emph{finitely Jacobson} if every finitely generated ideal $I$ of $A$ satisfies $\Jac I\subseteq\Nil I$.
+\end{definition}
+\noindent
+The theory of finitely Jacobson rings is not well developed, and its investigation is left for future work.
 \begin{thebibliography}{99}
 % delete irrelevant references
 \bibitem[Arr21]{Arr21} Arrow (https://mathoverflow.net/users/69037/arrow) (2021). \emph{Can you constructively prove a univariate polynomial algebra over a Jacobson ring is itself Jacobson?}. MathOverflow. (version: 2021-11-06). Available at: \url{https://mathoverflow.net/q/405685}.
 \bibitem[CC00]{CC00} Cederquist, J., Coquand, T. (2000). Entailment relations and distributive lattices. In: Buss, S.~R., Hájek, P., Pudlák, P., eds. \emph{Logic Colloquium ’98. Proceedings of the Annual European Summer Meeting of the Association for Symbolic Logic, Prague, Czech Republic, August 9--15, 1998}. Lecture Notes in Logic, 13. Natick, MA: A K Peters, pp.~127--139.
-\bibitem[CL03]{CL03} Coquand, T., Lombardi, H.(2003). Hidden constructions in abstract algebra: Krull dimension of distributive lattices and commutative rings. In: Fontana, M., Kabbaj \mbox{S.-E.}, Wiegand, S. eds. \emph{Commutative ring theory and applications (Fez, 2001)}, Lect. Notes Pure Appl. Math., 231. New York, NY: Marcel Dekker. pp. 477--499.
+\bibitem[CL03]{CL03} Coquand, T., Lombardi, H. (2003). Hidden constructions in abstract algebra: Krull dimension of distributive lattices and commutative rings. In: Fontana, M., Kabbaj \mbox{S.-E.}, Wiegand, S. eds. \emph{Commutative ring theory and applications (Fez, 2001)}, Lect. Notes Pure Appl. Math., 231. New York, NY: Marcel Dekker. pp. 477--499.
 \bibitem[CL24]{CL24} Coquand, T., Lombardi, H. (2024). \emph{Résolutions libres finies. Méthodes constructives}. Paris, France: Calvage et Mounet.
-% \bibitem[CLQ06]{CLQ06} Coquand, T., Lombardi, H., Quitte, C. (2006). Dimension de Heitmann des treillis distributifs et des anneaux commutatifs. \emph{Publications mathématiques de Besançon. Algèbre et Théorie des Nombres}, pp. 57--100.
+\bibitem[CLQ06]{CLQ06} Coquand, T., Lombardi, H., Quitte, C. (2006). Dimension de Heitmann des treillis distributifs et des anneaux commutatifs. \emph{Publications mathématiques de Besançon. Algèbre et Théorie des Nombres}, pp. 57--100.
 \bibitem[CP01]{CP01} Coquand, T., Persson, H. (2001). Valuations and Dedekind’s Prague theorem. \emph{J. Pure Appl. Algebra} 155(2--3):121--129. 
 \bibitem[CLR01]{CLR01} Coste, M., Lombardi, H., Roy, M.~F. (2001). Dynamical method in algebra: effective Nullstellens\"atze. \emph{Ann. Pure Appl. Logic}, 111(3):203--256.
 % \bibitem[DIM21]{DIM21} Delzell, C.~N., Ighedo, O., Madden, J.~J. (2021). Conjunctive join-semilattices. \emph{Algebra Univers.} 82, 51.
@@ -423,7 +429,7 @@ We note that Wiesnet \cite[Theorem 1]{Wie21}, \cite[Theorem 2]{Wie25} has obtain
 % \bibitem[LSY12]{LSY12} Lombardi, H., Schuster, P., Yengui, I. (2012). The Gröbner ring conjecture in one variable, \emph{Math. Z.} 270(3--4):1181--1185.
 \bibitem[Lor51]{Lor51} Lorenzen, P. (1951). Algebraische und logistische Untersuchungen über freie Verbände. \emph{Journal of Symbolic Logic}. 16(2):81--106.
 \bibitem[Lor25]{Lor25} Lorenzen, P. (2025). Algebraic and logistic investigations on free lattices. (Neuwirth, S., trans.) \emph{History and Philosophy of Logic}. 1--25. DOI: \href{https://doi.org/10.1080/01445340.2024.2444825}{10.1080/01445340.2024.2444825}.
-% \bibitem[MDI22]{MDI22} Madden, J.~J., Delzell, C.~N., Ighedo, O. (2022). Recent Work on Conjunctive Join-Semilattices. Presented at BLAST 2022, Orange, CA, August 9. Available at: \url{https://math.chapman.edu/blast2022/Tuesday/Madden-BLAST2022.pdf}
+\bibitem[MDI22]{MDI22} Madden, J.~J., Delzell, C.~N., Ighedo, O. (2022). Recent Work on Conjunctive Join-Semilattices. Presented at BLAST 2022, Orange, CA, August 9. Available at: \url{https://math.chapman.edu/blast2022/Tuesday/Madden-BLAST2022.pdf}
 \bibitem[MRR88]{MRR88} Mines, R., Richman, F., Ruitenburg, W. (1988). \emph{A course in constructive algebra}. Universitext. New York, NY: Springer.
 % \bibitem[PY14]{PY14} Pola, E., Yengui, I. (2014). Gröbner rings. \emph{Acta Sci. Math.} 80(3--4):363--372.
 \bibitem[Qui24]{Qui24} Quitté, C. Personal communication, 2024
