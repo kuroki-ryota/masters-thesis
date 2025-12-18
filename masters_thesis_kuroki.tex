@@ -90,8 +90,8 @@ The use of entailment relations in algebra dates back to Cederquist and Coquand 
 Classical arguments involving prime ideals and maximal ideals often use Zorn's lemma.
 The dynamical method simulates classical proofs in a simple deductive system, such as entailment relations, and extracts a constructive argument without prime ideals or maximal ideals.
 
-The most important step in our constructive proof of the general Nullstellensatz is the generalization (\cref{Emerton}) of Emerton's key lemma \cite[Lemma 6]{Eme}.
-Emerton's lemma is a lemma about integral domains, and we need some non-constructive principle to obtain the general Nullstellensatz from it.
+The most important step in our constructive proof of the general Nullstellensatz is the generalization (\cref{Emerton}) of Lemma 6 in Emerton's notes \cite{Eme}.
+The lemma is about integral domains, and we need some non-constructive principle to obtain the general Nullstellensatz from it.
 Our generalized lemma does not involve integral domains and is more useful in constructive mathematics.
 
 The definition of a Jacobson ring used in this paper contains a quantification over all ideals of a ring.
@@ -290,11 +290,11 @@ For $a\in A$, let $A_a$ denote the localization $A[1/a]$. Quitté \cite{Qui24} h
     Let $a'\in(\Jac_B0)\cap A$. For all $x\in A$, we have $1-a'x\in B^\times$. Hence $1-a'x\in B_a^\times\cap A_a\subseteq A_a^\times$ by \cref{invertibility-integral-extension}.
     Hence $a\in\Nil_A(1-a'x)\subseteq\Jac_A(1-a'x)$. Thus, $aa'\in\Jac_A0$ by \cref{radical-properties}-(2) with $(A,U,x,y)=(A,0,a,a')$.
 \end{proof}
-The following lemma is a constructive counterpart of the key lemma given by Emerton \cite[Lemma 6]{Eme}.
-Emerton's lemma assumes that $A$ and $B$ are integral domains.
+The following lemma is a constructive counterpart of \cite[Lemma 6]{Eme}\footnote{As the author points out \cite{Eme25}, this sort of result is standard.}.
+The lemma \cite[Lemma 6]{Eme} assumes that $A$ and $B$ are integral domains.
 As explained in \cref{dynamical}, we need to remove this assumption to eliminate the use of prime ideals and maximal ideals and to obtain a constructive proof of the general Nullstellensatz.
-Generalizing Emerton's key lemma is the most crucial process in the proof of our main theorem.
-\begin{lemma}[Constructive counterpart of Emerton's lemma]\label{Emerton}
+Obtaining constructive generalization of \cite[Lemma 6]{Eme} is the most crucial process in the proof of our main theorem.
+\begin{lemma}[Constructive counterpart of {\cite[Lemma 6]{Eme}}]\label{Emerton}
     Let $A$ be a Jacobson ring, $a\in A$, and $B$ be an $A$-algebra such that $B_a$ is integral over $A_a$.
     Then $a\Jac_BJ\subseteq\Nil_BJ$ holds for all ideals $J$ of $B$.
 \end{lemma}
@@ -317,7 +317,7 @@ Generalizing Emerton's key lemma is the most crucial process in the proof of our
     Thus, $af\in\Nil_{B_n}0=\Nil_{B'}0$, and hence $af\in\Nil_BJ$.
 \end{proof}
 \begin{remark}
-    The statement of Emerton's lemma \cite[Lemma 6]{Eme} is as follows:
+    The statement of \cite[Lemma 6]{Eme} is as follows:
     \begin{quote}
         \textit{If $A\to B$ is an injection of domains such that $A$ is Jacobson, and for some $a\in A-\{0\}$, the induced morphism $A_a \to B_a$ is integral, then $\Jac_B0=0$.}
     \end{quote}
@@ -330,7 +330,7 @@ Generalizing Emerton's key lemma is the most crucial process in the proof of our
                   \begin{itemize}
                     \item If $a\in\p$, then $a\Jac_{B'}0\subseteq\p$.
                     \item If $a\notin\p$, then $a\in A''-\{0\}$.
-                          Hence $\Jac_{B''}0=0$ by Emerton's lemma.
+                          Hence $\Jac_{B''}0=0$ by \cite[Lemma 6]{Eme}.
                           Hence $a\Jac_{B'}0\subseteq\Jac_{B'}0\subseteq\p$.
                   \end{itemize}
         \end{itemize}
@@ -416,6 +416,7 @@ The theory of finitely Jacobson rings is not well developed, and its investigati
 % \bibitem[DIM21]{DIM21} Delzell, C.~N., Ighedo, O., Madden, J.~J. (2021). Conjunctive join-semilattices. \emph{Algebra Univers.} 82, 51.
 \bibitem[Eis95]{Eis95} Eisenbud, D. (1995). \emph{Commutative Algebra: with a View Toward Algebraic Geometry}. Graduate Texts in Mathematics. Vol.~150. New York, NY: Springer.
 \bibitem[Eme]{Eme} Emerton, M. \emph{Jacobson rings}. Available at: \url{https://www.math.uchicago.edu/~emerton/pdffiles/jacobson.pdf}.
+\bibitem[Eme25]{Eme25} Emerton, M. Personal communication, 2025.
 \bibitem[Esp78]{Esp78} Español, L. (1978). \emph{Dimensión en álgebra constructiva}. PhD thesis. University of Zaragoza. Available at: \url{https://dialnet.unirioja.es/servlet/tesis?codigo=1402}.
 \bibitem[Gol51]{Gol51} Goldman, O. (1951). Hilbert rings and the Hilbert Nullstellensatz. \emph{Math. Z.} 54(2):136--140.
 % \bibitem[HP89]{HP89} Heinzer, W.~J., Papick, I.~J. (1989). Remarks on a remark of Kaplansky. \emph{Proc. Amer. Math. Soc.} 105:1--9.
