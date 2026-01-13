@@ -2,7 +2,7 @@
 
 \usepackage[top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
 \usepackage{amsmath,amsthm,amssymb}
-\usepackage{authblk,xurl,xcolor}
+\usepackage{authblk,xurl}
 \usepackage{hyperref,enumitem}
 \usepackage[capitalise]{cleveref}
 \setlist{itemsep=0pt}
@@ -34,7 +34,7 @@
 \DeclareMathOperator{\Jac}{Jac}
 \DeclareMathOperator{\Spec}{Spec}
 \DeclareMathOperator{\Kdim}{\mathsf{Kdim}}
-\title{On the constructive theory of Jacobson rings}
+\title{Constructive theory of Jacobson rings}
 \author{Ryota Kuroki}
 \affil{Graduate School of Mathematical Sciences, The University of Tokyo,\\3-8-1 Komaba, Meguro-ku, Tokyo, 153-8914, Japan}
 \date{}
@@ -44,8 +44,8 @@
 \section*{Abstract}
 We give a constructive proof of the general Nullstellensatz: a univariate polynomial ring over a commutative Jacobson ring is Jacobson. This theorem implies that every finitely generated algebra over a zero-dimensional ring or the ring of integers is Jacobson, which has been an open problem in constructive algebra.
 \section*{Acknowledgments}
-Firstly, I would like to express my deepest gratitude to my supervisor, Ryu Hasegawa, for his academic and financial support.
-Secondly, I would like to thank my secondary supervisor, Takeshi Saito, for giving me advice during meetings and seminars.
+Firstly, I would like to express my deepest gratitude to my supervisor, Ryu Hasegawa, for his academic support.
+Secondly, I would like to thank my secondary supervisor, Takeshi Saito, for providing me with valuable advice during meetings and seminars.
 I would also like to thank Peter Schuster for the interesting discussion and for helping me participate in the CIRM conference and the autumn school ``Proof and Computation'' in September 2025.
 
 I would like to thank Claude Quitté, Henri Lombardi, Stefan Neuwirth, Ryotaro Iwane, Yuto Ikeda, and Matthew Emerton for their helpful advice.
@@ -54,7 +54,7 @@ I would also like to thank Daniel Misselbeck-Wessel for pointing out that my res
 Among the (former) graduate students, I would like to thank Yuta Yamamoto, Yuto Arai, Ryuya Hora, Haruya Minoura, Sangwoo Kim, Yuki Kiyomori, Koki Kurahashi, Yuto Ikeda, Hiromasa Kondo, Haruki Toyota, and Minoru Sekiyama for their helpful comments and insightful talks in the graduate seminar.
 I would like to thank Thierry Coquand and Ingo Blechschmidt for providing advice on constructive algebra.
 I would like to thank Hajime Ishihara and Takako Nemoto for providing advice on studying constructive mathematics and for introducing me to people working on constructive algebra.
-I would also like to thank Ralph Willox for his writing advice.
+I would also like to thank Ralph Willox for his advice on writing.
 
 Lastly, I would like to thank my family for supporting my life and enabling me to focus on my research.
 
@@ -68,7 +68,7 @@ This thesis contains the contents of the following paper:
 \end{itemize}
 
 \section{Introduction}
-In this paper, all rings are considered to be commutative with identity.
+In this thesis, all rings are considered to be commutative with identity.
 
 Constructive algebra is the study of algebra without using non-constructive principles, such as Zorn's lemma or the law of excluded middle.
 See \cite{MRR88,LQ15,Yen15,CL24} for recent developments in constructive algebra.
@@ -78,8 +78,8 @@ Despite recent developments in constructive algebra, little work has been done o
 In classical mathematics, a Jacobson ring is a ring $A$ such that every prime ideal of $A$ is an intersection of maximal ideals.
 One of the most important theorems about Jacobson rings is the general Nullstellensatz: a univariate polynomial ring over a Jacobson ring is Jacobson. This theorem has been proved independently by Goldman \cite[Theorem 3]{Gol51} and Krull \cite[Satz 1]{Kru51}.
 
-Recently, Wessel \cite[Section 2.4.1]{Wes18} has proposed the following constructive definition of a Jacobson ring: a ring $A$ is called Jacobson if $\Nil I=\Jac I$ for all ideals $I$ of $A$, where $\Nil I$ and $\Jac I$ denote the nilradical and Jacobson radical of $I$, respectively.
-In this paper, based on this proposal by Wessel and the idea of the classical proof by Emerton \cite[Theorem 8]{Eme}, we give a constructive proof of the general Nullstellensatz (\cref{general-nullstellensatz}).
+Recently, Wessel \cite[Section 2.4.1]{Wes18} has proposed the following constructive definition of a Jacobson ring: a ring $A$ is \emph{Jacobson} if the nilradical of $A/I$ coincides with the Jacobson radical for all ideals $I$ of $A$.
+In this thesis, based on this proposal by Wessel and the idea of the classical proof by Emerton \cite[Theorem 8]{Eme}, we give a constructive proof of the general Nullstellensatz (\cref{general-nullstellensatz}).
 Our constructive proof provides a solution to two questions \cite{Wer17,Arr21} on MathOverflow and two open problems \cite[{}1.1, 1.2]{Lom23} in Lombardi's list.
 
 We use the entailment relation of prime ideal and the entailment relation of maximal ideal \cite{SW21} to obtain a constructive proof, although familiarity with entailment relations is not necessary to understand our proof.
@@ -93,11 +93,11 @@ The most important step in our constructive proof of the general Nullstellensatz
 The lemma is about integral domains, and we need some non-constructive principle to obtain the general Nullstellensatz from it.
 Our generalized lemma does not involve integral domains and is more useful in constructive mathematics.
 
-The definition of a Jacobson ring used in this paper contains a quantification over all ideals of a ring.
+The definition of a Jacobson ring used in this thesis contains a quantification over all ideals of a ring.
 This definition works in some predicative foundations of constructive mathematics, such as Martin-Löf type theory with universes using setoids, although we have to pay attention to the universe levels.
 On the other hand, this definition does not work in other predicative foundations that cannot handle power sets at all, such as Martin-Löf type theory without universes.
 Such foundations do not accept constructing a proposition by quantifying over all subsets of a set.
-A definition of a Jacobson ring that does not use this problematic quantification is still not known.
+A definition of a Jacobson ring that does not contain this problematic quantification is still not known.
 
 \section{Jacobson rings}
 In this section, we present the constructive definition of Jacobson rings and provide some examples.
@@ -292,7 +292,7 @@ For $a\in A$, let $A_a$ denote the localization $A[1/a]$. Quitté \cite{Qui24} h
 The following lemma is a constructive counterpart of \cite[Lemma 6]{Eme}\footnote{As the author points out \cite{Eme25}, this sort of result is standard.}.
 The lemma \cite[Lemma 6]{Eme} assumes that $A$ and $B$ are integral domains.
 As explained in \cref{dynamical}, we need to remove this assumption to eliminate the use of prime ideals and maximal ideals and to obtain a constructive proof of the general Nullstellensatz.
-Obtaining constructive generalization of \cite[Lemma 6]{Eme} is the most crucial process in the proof of our main theorem.
+Obtaining a constructive generalization of \cite[Lemma 6]{Eme} is the most crucial process in the proof of our main theorem.
 \begin{lemma}[Constructive counterpart of {\cite[Lemma 6]{Eme}}]\label{Emerton}
     Let $A$ be a Jacobson ring, $a\in A$, and $B$ be an $A$-algebra such that $B_a$ is integral over $A_a$.
     Then $a\Jac_BJ\subseteq\Nil_BJ$ holds for all ideals $J$ of $B$.
@@ -381,7 +381,7 @@ We obtain a solution to two problems \cite[{}1.1, 1.2]{Lom23} in Lombardi's list
     Then every finitely generated algebra over $A$ is Jacobson.
 \end{corollary}
 \section{Conclusions and future work}
-We have developed the basic constructive theory of Jacobson ring and obtained a constructive proof of the general Nullstellensatz.
+We have developed the basic constructive theory of Jacobson rings and obtained a constructive proof of the general Nullstellensatz.
 As a result, we proved the following theorems constructively:
 \begin{itemize}
     \item The ring $\Z$ is Jacobson.
@@ -394,14 +394,11 @@ As Lombardi \cite[{}1.4]{Lom23} has suggested, future studies could search for a
     Let $A$ be a Jacobson ring, $B$ be a finitely generated $A$-algebra, and $\mathfrak{n}$ be a maximal ideal of $B$. Then $\mathfrak{m}:=\mathfrak{n}\cap A$ is a maximal ideal of $A$, and $B/\mathfrak{n}$ is a finite extension field of $A/\mathfrak{m}$.
 \end{classicaltheorem}
 \noindent
-We note that Wiesnet \cite[Theorem 1]{Wie21}, \cite[Theorem 2]{Wie25} has obtained partial results in this direction.
+We note that Wiesnet \cite[Theorem 1]{Wie21}, \cite[Theorem 2]{Wie25} has obtained relevant results when $A$ is a discrete field or $\Z$.
 
 As mentioned in the introduction, the constructive definition of Jacobson rings contains a quantification over all ideals of a ring, which is not accepted in some predicative foundations of mathematics.
-A more acceptable alternative is the notion of \emph{finitely Jacobson rings}, which is introduced in several studies \cite[Définitions 1.2]{CLQ06}, \cite[p.\ 9]{MDI22}.
-\begin{definition}
-    We call a ring $A$ \emph{finitely Jacobson} if every finitely generated ideal $I$ of $A$ satisfies $\Jac I\subseteq\Nil I$.
-\end{definition}
-\noindent
+A more acceptable alternative is the notion of \emph{finitely Jacobson rings}, which is introduced in several studies \cite[Définitions 1.2]{CLQ06}, \cite[p.\ 9]{MDI22};
+a ring $A$ is \emph{finitely Jacobson} if every finitely generated ideal $I$ of $A$ satisfies $\Jac I\subseteq\Nil I$.
 The theory of finitely Jacobson rings is not well developed, and its investigation is left for future work.
 \begin{thebibliography}{99}
 % delete irrelevant references
@@ -417,7 +414,7 @@ The theory of finitely Jacobson rings is not well developed, and its investigati
 \bibitem[Eme]{Eme} Emerton, M. \emph{Jacobson rings}. Available at: \url{https://www.math.uchicago.edu/~emerton/pdffiles/jacobson.pdf}.
 \bibitem[Eme25]{Eme25} Emerton, M. Personal communication, 2025.
 \bibitem[Esp78]{Esp78} Español, L. (1978). \emph{Dimensión en álgebra constructiva}. PhD thesis. University of Zaragoza. Available at: \url{https://dialnet.unirioja.es/servlet/tesis?codigo=1402}.
-\bibitem[Gol51]{Gol51} Goldman, O. (1951). Hilbert rings and the Hilbert Nullstellensatz. \emph{Math. Z.} 54(2):136--140.
+\bibitem[Gol51]{Gol51} Goldman, O. (1951). Hilbert Rings and the Hilbert Nullstellensatz. \emph{Math. Z.} 54(2):136--140.
 % \bibitem[HP89]{HP89} Heinzer, W.~J., Papick, I.~J. (1989). Remarks on a remark of Kaplansky. \emph{Proc. Amer. Math. Soc.} 105:1--9.
 \bibitem[Joy75]{Joy75} Joyal, A. (1975). Les Théorèmes de Chevalley-Tarski et Remarques sur l'Algèbre Constructive. \emph{Cah. Top. Géom. Diff. Cat. XVI}, 256--258.
 % \bibitem[KY10]{KY10} Kacem, A.~H., Yengui, I. (2010). Dynamical Gröbner bases over Dedekind rings. \emph{J. Algebra}. 324(1):12--24.
