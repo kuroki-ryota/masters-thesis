@@ -86,7 +86,7 @@ we give a constructive proof of the general Nullstellensatz (\cref{general-nulls
 Our constructive proof provides a solution to two questions \cite{Wer17,Arr21} on MathOverflow and two problems \cite[{}1.1, 1.2]{Lom23} in Lombardi's list of open problems,
 which has been posted to the Google Groups forum named ``constructivenews.''
 
-Our proof of the general Nullstellensatz implicitly uses the idea of the entailment relation of prime ideal and the entailment relation of maximal ideal \cite{SW21}, although familiarity with entailment relations is not necessary to understand our proof.
+Our proof of the general Nullstellensatz implicitly uses the idea of the entailment relation of prime ideal and the entailment relation of maximal ideal \cite{SW21}, although familiarity with entailment relations is not necessary to understand our proof (see \cref{dynamical} for details).
 A notion similar to the entailment relation has been considered by Lorenzen \cite{Lor51}\footnote{Neuwirth \cite{Lor25} has recently translated \cite{Lor51} into English.},
 and Scott \cite{Sco71,Sco74} has later introduced the terminology.
 The use of entailment relations in algebra dates back to Cederquist and Coquand \cite{CC00} and Coquand and Persson \cite{CP01}. Their work is closely related to the dynamical method by Coste, Lombardi, and Roy \cite{CLR01}, which is a generic method to turn a classical proof into a constructive proof.
@@ -99,12 +99,14 @@ The most important step in our proof is the constructive generalization (\cref{E
 The original classical lemma is about integral domains, and we need non-constructive principles to obtain the general Nullstellensatz from it.
 Our generalized lemma does not involve integral domains and is more useful in constructive mathematics.
 
-The definition of a Jacobson ring used in this thesis contains a quantification over all ideals of a ring.
-This definition works in some predicative foundations of constructive mathematics, such as Martin-Löf type theory with universes using setoids, although we have to pay attention to the universe levels.
-On the other hand, this definition does not work in other predicative foundations that cannot handle power sets at all, such as Martin-Löf type theory without universes.
+The foundations of constructive mathematics include predicative systems such as Constructive Zermelo--Frankel set theory (CZF) and Martin-Löf type theory (MLTT), as well as impredicative systems such as Intuitionistic Zermelo--Frankel set theory (IZF) and the Calculus of Inductive Constructions (CIC).
+The main difference is that impredicative systems admit the axiom of power set, while predicative systems do not.
+Our constructive proof can be formalized in impredicative systems and also in some predicative systems, such as MLTT with universes and CZF.
+The key point is the definition of Jacobson rings; the definition used in this thesis contains a quantification over all ideals of a ring.
+This definition works in impredicative systems and in some predicative foundations where we can quantify over a power class.
+However, it does not work in other predicative foundations that cannot handle power classes at all, such as MLTT without universes.
 Such foundations do not accept constructing a proposition by quantifying over all subsets of a set.
 A definition of a Jacobson ring that does not contain this problematic quantification is still not known.
-
 \section{Jacobson rings}
 In this section, we present the constructive definition of Jacobson rings and provide some examples.
 We first recall some basic definitions.
